@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="output.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav class="bg-[#111827] min-h-screen max-w-full text-white">
+      <div class="flex justify-between max-w-[1200px] w-[90%] mx-auto p-6">
+        <div class="flex cursor-pointer gap-4 h-10 items-center justify-center">
+          <img
+            class="h-10 w-10"
+            src="https://flowbite.com/docs/images/logo.svg"
+            alt=""
+          />
+          <p class="text-xl font-josefin">FlowBite</p>
+        </div>
+        <section class="w-[100px] md:w-auto flex flex-col gap-4">
+          <div class="md:hidden flex items-center justify-center">
+            <button
+              id="menu-btn"
+              class="text-white focus:outline-none"
+              aria-label="Toggle Menu"
+            >
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16m-7 6h7"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <div
+            id="menu"
+            class="hidden md:flex flex-col md:flex-row gap-6 text-xl font-josefin"
+          >
+            <ul class="flex items-center flex-col md:flex-row gap-6 text-xl">
+              <li class="cursor-pointer hover:text-blue-500">Home</li>
+              <li class="cursor-pointer hover:text-blue-400">About</li>
+              <li class="cursor-pointer hover:text-blue-400 font-ballu">
+                Services
+              </li>
+              <li class="cursor-pointer hover:text-blue-400">Pricing</li>
+              <li class="cursor-pointer hover:text-blue-400">Contact</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </nav>
+
+    <script>
+      const menuBtn = document.getElementById("menu-btn");
+      const menu = document.getElementById("menu");
+
+      menuBtn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>
